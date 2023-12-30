@@ -10,14 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  analyzer: '>=4.6.0 <6.0.0'
-  analyzer_plugin: ^0.11.2
-  custom_lint_builder: ^0.5.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  custom_lint: ^0.5.7
+  package_linter:
+    git:
+      url: 'https://github.com/ipatavatsizz/package_linter.git'
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
