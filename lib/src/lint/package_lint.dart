@@ -1,5 +1,6 @@
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
+import 'package:flutter/cupertino.dart';
 
 class PackageLinter extends PluginBase {
   @override
@@ -18,6 +19,11 @@ class PackageLintRule extends DartLintRule {
   void run(CustomLintResolver resolver, ErrorReporter reporter,
       CustomLintContext context) {
     context.registry.addAnnotation((node) {
+      switch (node.name.name.toLowerCase()) {
+        case 'experimental':
+          debugPrint('experimental');
+          break;
+      }
       reporter.reportErrorForNode(_code, node, []);
     });
   }
